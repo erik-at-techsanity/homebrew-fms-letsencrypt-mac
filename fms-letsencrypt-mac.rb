@@ -15,6 +15,8 @@ class FmsLetsencryptMac < Formula
     bin.write_exec_script (libexec/"get_certificate")
     bin.write_exec_script (libexec/"revoke_certificate")
 
+    etc.install "config.dist.sh"
+
     prefix.install "README.md"
     prefix.install "LICENSE"
   end
