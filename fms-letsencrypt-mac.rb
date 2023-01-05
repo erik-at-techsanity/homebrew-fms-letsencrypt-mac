@@ -19,14 +19,14 @@ class FmsLetsencryptMac < Formula
   end
 
   def install
-#     libexec.install "common.sh"
-    libexec.install "get_certificate.sh" => "get_certificate"
-    libexec.install "revoke_certificate.sh" => "revoke_certificate"
+    libexec.install "bin/common.sh"
+    libexec.install "bin/get_certificate.sh" => "get_certificate"
+    libexec.install "bin/revoke_certificate.sh" => "revoke_certificate"
 
     bin.write_exec_script (libexec/"get_certificate")
     bin.write_exec_script (libexec/"revoke_certificate")
 
-    etc.install "fms-letsencrypt-mac.dist.conf"
+    etc.install "etc/fms-letsencrypt-mac.dist.conf"
 
     prefix.install "README.md"
     prefix.install "LICENSE"
