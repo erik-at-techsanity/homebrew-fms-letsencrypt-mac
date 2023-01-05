@@ -7,7 +7,13 @@ class FmsLetsencryptMac < Formula
 
   depends_on "certbot"
 
-  caveats "this is a test caveat"
+   def caveats
+    return unless latest_version_installed?
+
+    <<~EOS
+      Here's my Caveats.
+    EOS
+  end
 
   def install
     libexec.install "common.sh"
