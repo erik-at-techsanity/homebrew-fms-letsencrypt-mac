@@ -19,7 +19,7 @@ class FmsLetsencryptMac < Formula
   end
 
   def install
-    libexec.install "common.sh"
+#     libexec.install "common.sh"
     libexec.install "get_certificate.sh" => "get_certificate"
     libexec.install "revoke_certificate.sh" => "revoke_certificate"
 
