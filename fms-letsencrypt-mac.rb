@@ -7,6 +7,8 @@ class FmsLetsencryptMac < Formula
 
   depends_on "certbot"
 
+  caveats "this is a test caveat"
+
   def install
     libexec.install "common.sh"
     libexec.install "get_certificate.sh" => "get_certificate"
