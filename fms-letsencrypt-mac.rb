@@ -7,7 +7,7 @@ class FmsLetsencryptMac < Formula
 
   depends_on "certbot"
 
-   def caveats
+  def caveats
     return unless latest_version_installed?
 
     <<~EOS
