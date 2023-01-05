@@ -2,7 +2,7 @@ class FmsLetsencryptMac < Formula
   desc "Let's Encrypt SSL Certificate Support Utilities for FileMaker Server on Macs"
   homepage "https://github.com/erik-at-techsanity/fms-letsencrypt-mac"
   url "https://github.com/erik-at-techsanity/fms-letsencrypt-mac/releases/download/v0.2.0/fms-letsencrypt-mac.tar.gz"
-  sha256 "32b5fc69d87759d934579b64d1d42fedb044b69d6c839fa1047087150916f81e"
+  sha256 "681416054e32f1a2fdb47febdc50877266fca4fccef5a359614ed57d58f620bb"
   license "Apache-2.0"
 
   depends_on "certbot"
