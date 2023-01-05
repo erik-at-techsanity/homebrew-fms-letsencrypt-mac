@@ -11,7 +11,10 @@ class FmsLetsencryptMac < Formula
     return unless latest_version_installed?
 
     <<~EOS
-      Here's my Caveats.
+      Before starting the com.techsanity.fms-ssl service:
+      * Rename /opt/homebrew/etc/fms-letsencrypt-mac.dist.conf to /opt/homebrew/etc/fms-letsencrypt-mac.conf
+      * Edit DOMAIN, EMAIL, FMS_USER, and FMS_PASSWORD to reflect your environment
+      * Start / restart the service:  `sudo launchctl start com.filemaker.fms`
     EOS
   end
 
@@ -23,7 +26,7 @@ class FmsLetsencryptMac < Formula
     bin.write_exec_script (libexec/"get_certificate")
     bin.write_exec_script (libexec/"revoke_certificate")
 
-    etc.install "config.dist.sh"
+    etc.install "fms-letsencrypt-mac.dist.conf"
 
     prefix.install "README.md"
     prefix.install "LICENSE"
